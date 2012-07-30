@@ -1,0 +1,36 @@
+apply plugin: 'java'
+
+// project properties
+
+allprojects {
+    group = "org.sample"
+    sourceCompatibility = JavaVersion.VERSION_1_6
+}
+
+subprojects {
+	apply plugin: 'java'
+	apply plugin: 'eclipse'
+	
+	version = '1.0'
+
+	project.ext.springVersion = '3.1.0.RELEASE'
+	project.ext.jacksonVersion = '1.9.1'
+
+	repositories {
+		mavenCentral()
+	}
+
+	dependencies {
+		// Logging
+		compile "org.slf4j:slf4j-api:1.6.1"
+		compile "org.slf4j:log4j-over-slf4j:1.6.1"
+		compile "org.slf4j:jcl-over-slf4j:1.6.1"
+		compile "ch.qos.logback:logback-classic:0.9.29"
+
+		testCompile "junit:junit:4.8.2"
+		testCompile "org.mockito:mockito-all:1.8.5"
+		testCompile "org.powermock:powermock-module-junit4:1.4.10"
+		testCompile "org.powermock:powermock-api-mockito:1.4.10"
+		testCompile "org.springframework:spring-test:${springVersion}"
+	}
+}

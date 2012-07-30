@@ -1,0 +1,16 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+dependencies {
+	
+	// Spring Framework
+	compile "org.springframework:spring-core:${springVersion}"
+	compile "org.springframework:spring-beans:${springVersion}"
+	compile "org.springframework:spring-context:${springVersion}"
+    
+    compile "com.google.guava:guava:10.0.1"
+    
+    // Jackson
+    compile "org.codehaus.jackson:jackson-core-asl:${jacksonVersion}"
+
+}

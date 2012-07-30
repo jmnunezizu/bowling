@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="0" failures="0" hostname="juno" name="org.sample.bowling.domain.BowlingLaneTest" tests="9" time="0.17" timestamp="2012-07-30T10:14:38">
+  <properties />
+  <testcase classname="org.sample.bowling.domain.BowlingLaneTest" name="getIdReturnsNullIIfItHasntBeenPersisted" time="0.0050" />
+  <testcase classname="org.sample.bowling.domain.BowlingLaneTest" name="startThrowsExceptionIfThereAreNoPlayers" time="0.0020" />
+  <testcase classname="org.sample.bowling.domain.BowlingLaneTest" name="startThrowsExceptionIfTheGameIsAlreadyInProgress" time="0.0060" />
+  <testcase classname="org.sample.bowling.domain.BowlingLaneTest" name="startSartsTheGameIfThereArePlayers" time="0.0" />
+  <testcase classname="org.sample.bowling.domain.BowlingLaneTest" name="addPlayerWorks" time="0.0020" />
+  <testcase classname="org.sample.bowling.domain.BowlingLaneTest" name="addPlayerThrowsExceptionIfTheGameIsInProgress" time="0.0010" />
+  <testcase classname="org.sample.bowling.domain.BowlingLaneTest" name="playAllFramesEndsTheGame" time="0.027" />
+  <testcase classname="org.sample.bowling.domain.BowlingLaneTest" name="playMoreThanTenFramesThrowsException" time="0.014" />
+  <testcase classname="org.sample.bowling.domain.BowlingLaneTest" name="throwAllStrikeEndsTheGameWithPerfectScoring" time="0.0020" />
+  <system-out><![CDATA[Throwing frame number 1
+Throwing frame number 2
+Throwing frame number 3
+Throwing frame number 4
+Throwing frame number 5
+Throwing frame number 6
+Throwing frame number 7
+Throwing frame number 8
+Throwing frame number 9
+Throwing frame number 10
+Throwing frame number 1
+Throwing frame number 2
+Throwing frame number 3
+Throwing frame number 4
+Throwing frame number 5
+Throwing frame number 6
+Throwing frame number 7
+Throwing frame number 8
+Throwing frame number 9
+Throwing frame number 10
+Throwing frame number 11
+Frame 1, score: 30
+
+Frame 2, score: 30
+
+Frame 3, score: 30
+
+Frame 4, score: 30
+
+Frame 5, score: 30
+
+Frame 6, score: 30
+
+Frame 7, score: 30
+
+Frame 8, score: 30
+
+Frame 9, score: 30
+
+Frame 10, score: 30
+
+The total score for player #1 is 300
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
