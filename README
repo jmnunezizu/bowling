@@ -1,0 +1,1 @@
+This is a simple Bowling ScoreBoard application written in Java. It has a REST API to interact with the game. I chose a REST API rather than a command line interface because I thought it was more interesting.
