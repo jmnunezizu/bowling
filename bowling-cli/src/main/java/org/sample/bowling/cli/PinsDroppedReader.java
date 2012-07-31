@@ -5,7 +5,9 @@ import java.io.IOException;
 
 /**
  * This is the class used to read the number of pins dropped in each throw. It
- * provides validation to the input.
+ * provides validation -up to a certain level- to the input.
+ *
+ * <p>The rest of the validation is handled by the core of the bowling game.</p>
  *
  * @author jmnunezizu
  */

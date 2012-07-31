@@ -12,6 +12,7 @@ import org.sample.bowling.exception.InvalidNumberOfPinsException;
 import org.sample.bowling.exception.InvalidPlayerNameException;
 
 /**
+ * This is the main class for the CLI version of the Bowling game.
  *
  * @author jmnunezizu
  */
@@ -24,6 +25,9 @@ public class BowlingCli {
     private BowlingLaneScoreBoardConsolePrinter scoreBoard;
     private PinsDroppedReader pinsDroppedReader;
 
+    /**
+     * Default constructor that wires up all the beans.
+     */
     public BowlingCli() {
         bl = new BowlingLane();
         in = new BufferedReader(new InputStreamReader(System.in));
@@ -33,10 +37,18 @@ public class BowlingCli {
         pinsDroppedReader = new PinsDroppedReader(in, messenger);
     }
 
+    /**
+     * Main method executed by the cli. This is where the game is started.
+     *
+     * @param args
+     */
     public static void main(String[] args) {
         new BowlingCli().run();
     }
 
+    /**
+     * This is the actual main method of the cli game.
+     */
     private void run() {
         messenger.printWelcomeMessage();
 
@@ -47,6 +59,9 @@ public class BowlingCli {
         scoreBoard.printScoreBoard(bl);
     }
 
+    /**
+     * It configures the player(s) information before actually starting a game.
+     */
     private void configure() {
         try {
             configurePlayers();
@@ -75,6 +90,8 @@ public class BowlingCli {
     }
 
     /**
+     * This is where the players are configured. It is the place in where we
+     * instantiate the players and register them with the game.
      *
      * @throws IOException
      */

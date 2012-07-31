@@ -9,6 +9,10 @@ import org.sample.bowling.domain.Frame;
 import org.sample.bowling.domain.Player;
 
 /**
+ * This class is utilised as a "view" for a {@link BowlingLane} game.
+ *
+ * <p>This particular view, prints the information of a given BowlingLane game in
+ * the form of a scoring board.</p>
  *
  * @author jmnunezizu
  */
