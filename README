@@ -40,6 +40,8 @@ Once you have it running, you can execute the following operations:
 - POST /bowlingLane/{bowlingLaneId}/start > starts the game
 - POST /bowlingLane/{bowlingLaneId}/droppins/{numberOfPins} > drops {numberOfPins} for the current player
 
+As you can see the REST API is quite simple, but it shows how can a different client -and technology- can be used to play the same game.
+
 Command Line
 ------------
 
