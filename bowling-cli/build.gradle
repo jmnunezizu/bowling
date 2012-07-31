@@ -1,0 +1,26 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+jar {
+    from {
+        configurations.runtime.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+    
+    manifest {
+        attributes("Implementation-Title": "Bowling CLI", "Implementation-Version": version, "Main-Class": "org.sample.bowling.cli.BowlingCli")
+    }
+}
+
+dependencies {
+
+	compile project(':bowling-core')
+
+	// Spring Framework
+	compile "org.springframework:spring-core:${springVersion}"
+	compile "org.springframework:spring-beans:${springVersion}"
+	compile "org.springframework:spring-web:${springVersion}"
+	compile "org.springframework:spring-context:${springVersion}"
+    
+    compile "com.google.guava:guava:10.0.1"
+
+}

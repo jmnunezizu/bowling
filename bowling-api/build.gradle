@@ -1,0 +1,29 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+dependencies {
+
+	compile project(':bowling-core')
+
+	// Spring Framework
+	compile "org.springframework:spring-core:${springVersion}"
+	compile "org.springframework:spring-beans:${springVersion}"
+	compile "org.springframework:spring-web:${springVersion}"
+	compile "org.springframework:spring-context:${springVersion}"
+
+	// JAX-RS / Jersey
+	compile "javax.ws.rs:jsr311-api:1.1.1"
+	compile "com.sun.jersey:jersey-bundle:1.8"
+	compile "com.sun.jersey:jersey-server:1.8"
+	compile "com.sun.jersey.contribs:jersey-spring:1.8"
+	compile "com.sun.jersey:jersey-json:1.8"
+	
+	// Jackson
+	compile "org.codehaus.jackson:jackson-core-asl:${jacksonVersion}"
+	compile "org.codehaus.jackson:jackson-mapper-asl:${jacksonVersion}"
+	compile "org.codehaus.jackson:jackson-jaxrs:${jacksonVersion}"
+	compile "org.codehaus.jackson:jackson-xc:${jacksonVersion}"
+    
+    compile "com.google.guava:guava:10.0.1"
+
+}

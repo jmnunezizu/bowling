@@ -1,1 +1,1 @@
-include 'sample-core', 'sample-api'
+include 'bowling-core', 'bowling-api', 'bowling-cli'
