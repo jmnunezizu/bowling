@@ -1,1 +1,50 @@
-This is a simple Bowling ScoreBoard application written in Java. It has a REST API to interact with the game. I chose a REST API rather than a command line interface because I thought it was more interesting.
+Introduction
+------------
+
+This is a simple Bowling ScoreBoard application written in Java. 
+
+The application has a core module and different "client" modules used to talk to the core game. The rationale behind this is to show how it is possible to have a single model and multiple clients that use different technologies to get the same result.
+
+Modules
+-------
+
+The following modules ara available:
+
+- bowling-api > This is a REST API used to play the game. Is not complete, but it lets you play a full bowling game. 
+
+- bowling-cli > This is a command line interface client used to play the game. 
+
+- bowling-core > This is the main module; it is where the magic happens. All business rules are enforced and executed in this module.
+
+Setup
+-----
+
+In order to compile this, you will need Gradle (www.gradle.org).
+
+Once you have Gradle installed, you will have to:
+
+1. cd into bowling
+2. gradle build eclipse
+
+This will compile all the modules of the application, and will also generate the Eclipse project files so it can be easily imported.
+
+REST API
+--------
+
+In order to play a game using the REST API, you will have to have the bowling-api module running in a servlet container of your choice (Jetty is a nice candidate).
+
+Once you have it running, you can execute the following operations:
+
+- POST /bowlingLane > creates a new game
+- POST /bowlingLane/players with body {"name":"player name"} > adds a player named "player name" to the game
+- POST /bowlingLane/{bowlingLaneId}/start > starts the game
+- POST /bowlingLane/{bowlingLaneId}/droppins/{numberOfPins} > drops {numberOfPins} for the current player
+
+Command Line
+------------
+
+If you wish to execute the command line interface, and you have already built the app, you can do the following:
+
+- cd bowling-app/bowling-cli/build/libs
+- java -jar bowling-cli-1.0.jar
+
